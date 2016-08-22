@@ -1,5 +1,6 @@
 FROM centos
 
+RUN yum update
 RUN yum -y install /usr/bin/ps nfs-utils && yum clean all
 RUN mkdir -p /exports
 ADD run_nfs.sh /usr/local/bin/
